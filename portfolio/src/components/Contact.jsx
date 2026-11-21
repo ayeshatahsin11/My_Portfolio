@@ -1,6 +1,12 @@
 import { Mail, Briefcase } from "lucide-react";
+import { gmailLink, FIVERR_URL, EMAIL } from "../utils/contact";
 
 export default function Contact() {
+  const mailLink = gmailLink(
+    "Project inquiry",
+    "Hi Ayesha,\n\nI'd like to talk about a project.\n\nAbout my project:\n"
+  );
+
   return (
     <section id="contact" className="section">
       <div className="container">
@@ -16,18 +22,15 @@ export default function Contact() {
           </p>
 
           <div className="contact-actions">
-            <a
-              href="https://www.fiverr.com/s/K3w4gqE"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-            >
+            <a href={FIVERR_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
               <Briefcase size={18} /> Hire me on Fiverr
             </a>
-            <a href="mailto:ayeshatahsin1000@gmail.com" className="btn btn-ghost">
+            <a href={mailLink} target="_blank" rel="noreferrer" className="btn btn-ghost">
               <Mail size={18} /> Send an email
             </a>
           </div>
+
+          <p className="contact-email">Or write to me directly: {EMAIL}</p>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import ProjectDetails from "./pages/ProjectDetails";
 
 // Makes links like "/#skills" scroll to the right section,
 // and scrolls to the top on normal page changes.
@@ -31,7 +32,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* The project details route comes in Step 4 */}
+          <Route path="/project/:id" element={<ProjectDetails />} />
         </Routes>
       </main>
       <Footer />

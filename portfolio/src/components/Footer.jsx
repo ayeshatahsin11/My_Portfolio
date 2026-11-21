@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, ArrowUpRight } from "lucide-react";
-
+import { gmailLink } from "../utils/contact";
 export default function Footer() {
   return (
     <footer className="footer">
@@ -28,7 +28,7 @@ export default function Footer() {
           >
             GitHub <ArrowUpRight size={15} />
           </a>
-          <a href="mailto:ayeshatahsin1000@gmail.com">
+                   <a href={gmailLink()} target="_blank" rel="noreferrer">
             <Mail size={15} /> ayeshatahsin1000@gmail.com
           </a>
         </div>

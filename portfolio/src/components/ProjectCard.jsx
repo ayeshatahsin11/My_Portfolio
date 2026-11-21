@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { img } from "../utils/cloudinary";
 
 export default function ProjectCard({ project }) {
   return (
     <Link to={`/project/${project.id}`} className="project-card card-glass">
       <div className="project-thumb">
         <img
-          src={project.image}
+          src={img(project.images?.[0], 800)}
           alt={project.title}
           loading="lazy"
           onError={(e) => {
