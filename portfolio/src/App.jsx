@@ -1,24 +1,31 @@
-import { useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ProjectDetails from "./pages/ProjectDetails";
 
-// Makes links like "/#skills" scroll to the right section,
-// and scrolls to the top on normal page changes.
+// Handles scrolling when the route changes:
+// - opening a new page  -> instantly at the top (no scrollbar animation)
+// - links like "/#skills" from another page -> instantly at that section
+// - links like "#skills" on the same page   -> smooth scroll
 function ScrollToHash() {
   const { pathname, hash, key } = useLocation();
+  const previousPath = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const pageChanged = previousPath.current !== pathname;
+    previousPath.current = pathname;
+
     if (hash) {
-      const id = hash.replace("#", "");
-      setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 50);
-    } else {
-      window.scrollTo(0, 0);
+      const element = document.getElementById(hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: pageChanged ? "instant" : "smooth" });
+        return;
+      }
     }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname, hash, key]);
 
   return null;
