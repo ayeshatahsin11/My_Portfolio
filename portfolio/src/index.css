@@ -990,13 +990,13 @@ h4 {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: var(--muted);
+  color: var(--cyan) ;
   font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
 .detail-links a:hover {
-  color: var(--cyan);
+  color:var(--muted);
 }
 
 /* case study blocks */

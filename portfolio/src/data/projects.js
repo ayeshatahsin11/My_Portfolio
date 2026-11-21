@@ -3,6 +3,32 @@
 
 export const projects = [
   {
+    id: "lms-platform",
+    title: "LMS Platform",
+    category: "Full-Stack · MERN",
+    tagline:
+      "Learning management system for courses, students and instructors.",
+    description:
+      "A learning platform where instructors publish courses and students enroll and learn, built end to end with a React frontend and a REST API backend.",
+    problem:
+      "Instructors need a simple way to publish courses and track students, and learners need one place to enroll and study.",
+    solution:
+      "I built course creation, enrollment, and separate student and instructor dashboards on top of a secure REST API.",
+    images: ["lms-1", "lms-2", "lms-3"],
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    role: "Full-stack developer",
+    priceRange: "$200 – $450",
+    timeline: "2 - 3 weeks",
+    features: [
+      "Authentication and role-based access",
+      "Course creation and enrollment",
+      "Student and instructor dashboards",
+      "REST API with secure endpoints",
+    ],
+    liveUrl: " lms-finalexamproject.vercel.app ",
+    githubUrl: "https://github.com/ayeshatahsin11/LMS_finalexamproject",
+  },
+  {
     id: "veggies-ecommerce",
     title: "Veggies E-Commerce",
     category: "Full-Stack · MERN",
@@ -14,10 +40,17 @@ export const projects = [
     solution:
       "I built a store with three roles (user, merchant, admin), protected dashboards, product management with image upload, and a cart that creates one order per merchant.",
     images: ["veggies-1", "veggies-2", "veggies-3"],
-    tech: ["Next.js", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Cloudinary"],
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Cloudinary",
+    ],
     role: "Full-stack developer (design, frontend, backend)",
-    priceRange: "$250 – $600",
-    timeline: "2 – 4 weeks",
+    priceRange: "$150 – $350",
+    timeline: "2 – 3 weeks",
     features: [
       "Three roles (user, merchant, admin) with protected routes",
       "Product and category management with image upload",
@@ -28,31 +61,7 @@ export const projects = [
     liveUrl: "",
     githubUrl: "https://github.com/ayeshatahsin11/E-Commerce_01",
   },
-  {
-    id: "lms-platform",
-    title: "LMS Platform",
-    category: "Full-Stack · MERN",
-    tagline: "Learning management system for courses, students and instructors.",
-    description:
-      "A learning platform where instructors publish courses and students enroll and learn, built end to end with a React frontend and a REST API backend.",
-    problem:
-      "Instructors need a simple way to publish courses and track students, and learners need one place to enroll and study.",
-    solution:
-      "I built course creation, enrollment, and separate student and instructor dashboards on top of a secure REST API.",
-    images: ["lms-1", "lms-2", "lms-3"],
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    role: "Full-stack developer",
-    priceRange: "$300 – $700",
-    timeline: "3 – 5 weeks",
-    features: [
-      "Authentication and role-based access",
-      "Course creation and enrollment",
-      "Student and instructor dashboards",
-      "REST API with secure endpoints",
-    ],
-    liveUrl: "",
-    githubUrl: "",
-  },
+
   {
     id: "chat-api",
     title: "Real-Time Chat API",
@@ -67,8 +76,8 @@ export const projects = [
     images: ["chat-1", "chat-2", "chat-3"],
     tech: ["Node.js", "Express", "MongoDB", "Socket.io"],
     role: "Backend developer",
-    priceRange: "$80 – $200",
-    timeline: "1 – 2 weeks",
+    priceRange: "$60 – $180",
+    timeline: "8 - 10 days",
     features: [
       "User authentication",
       "One-to-one messaging",
@@ -92,8 +101,8 @@ export const projects = [
     images: ["api-1", "api-2", "api-3"],
     tech: ["Node.js", "Express", "MongoDB", "Mongoose"],
     role: "Backend developer",
-    priceRange: "$50 – $150",
-    timeline: "3 – 7 days",
+    priceRange: "$40 – $100",
+    timeline: "4 – 7 days",
     features: [
       "CRUD operations with validation",
       "Authentication and authorization middleware",
@@ -116,8 +125,8 @@ export const projects = [
     images: ["integration-1", "integration-2", "integration-3"],
     tech: ["React", "Axios", "REST API", "CSS"],
     role: "Frontend developer",
-    priceRange: "$30 – $100",
-    timeline: "2 – 5 days",
+    priceRange: "$25 – $80",
+    timeline: "2 – 4 days",
     features: [
       "Data fetching with loading and error states",
       "Reusable components",
@@ -140,7 +149,7 @@ export const projects = [
     images: ["figma-next-1", "figma-next-2", "figma-next-3"],
     tech: ["Next.js", "Tailwind CSS", "Figma"],
     role: "Frontend developer",
-    priceRange: "$70 – $150",
+    priceRange: "$50 – $120",
     timeline: "4 – 7 days",
     features: [
       "Pixel-perfect match with the design",
@@ -164,8 +173,8 @@ export const projects = [
     images: ["figma-react-1", "figma-react-2", "figma-react-3"],
     tech: ["React", "CSS", "Figma"],
     role: "Frontend developer",
-    priceRange: "$50 – $120",
-    timeline: "3 – 6 days",
+    priceRange: "$40 – $90",
+    timeline: "3 – 5 days",
     features: [
       "Reusable component structure",
       "Responsive design",
@@ -188,7 +197,7 @@ export const projects = [
     images: ["figma-html-1", "figma-html-2", "figma-html-3"],
     tech: ["HTML", "CSS", "JavaScript", "Figma"],
     role: "Frontend developer",
-    priceRange: "$30 – $80",
+    priceRange: "$30 – $60",
     timeline: "2 – 4 days",
     features: [
       "Semantic HTML structure",

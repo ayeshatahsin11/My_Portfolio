@@ -115,7 +115,7 @@ export default function ProjectDetails() {
                   <Wallet size={20} />
                 </div>
                 <div>
-                  <span>Typical price range</span>
+                  <span>Estimated price range</span>
                   <strong>{project.priceRange}</strong>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function ProjectDetails() {
                   <Clock size={20} />
                 </div>
                 <div>
-                  <span>Delivery time</span>
+                  <span>Estimated delivery</span>
                   <strong>{project.timeline}</strong>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function ProjectDetails() {
                   </a>
                 )}
                 {project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer" >
                     <Code size={16} /> Source code
                   </a>
                 )}
